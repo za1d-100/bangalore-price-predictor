@@ -4,7 +4,7 @@ import numpy as np
 __locations=None
 __data_columns=None
 __model=None
-def get_loaction_names():
+def get_location_names():
     return __locations
 def get_estimated_price(location,sqft,bhk,bath):
    try:
