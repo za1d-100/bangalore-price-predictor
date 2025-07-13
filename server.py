@@ -1,5 +1,6 @@
 from flask import Flask,request, jsonify
 import util
+import os
 app = Flask(__name__)
 
 @app.route('/get_location_names')
@@ -22,4 +23,5 @@ def predict_home_price():
     return response
 if __name__=="__main__":
     util.load_saved_artifacts()
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
+
